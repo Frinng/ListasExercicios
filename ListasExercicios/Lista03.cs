@@ -7,12 +7,22 @@ public class Lista01 {
         bool Continuar = true;
         string DigitoEscolha;
         int Escolha;
+        
+        //Variaveis questao A
         int N1A = 0,N2A = 0;
         string N1a, N2a;
+        
+        //Variaveis questao B
         int N1B = 0,N2B = 0;
         string N1b, N2b;
+        
+        //Variaveis questao C
         int N1C = 0,N2C = 0;
         string N1c, N2c;
+        
+        //Variaveis questao D
+        int N1D = 0, N2D = 0, N3D = 0;
+        string N1d, N2d, N3d;
         
         do {
             Console.Clear();
@@ -129,8 +139,6 @@ public class Lista01 {
                     case 3:
                         Console.Clear();
                         
-                        Console.Clear();
-                        
                         Console.WriteLine("Digite um numero: ");
                         N1c = Console.ReadLine();
                         
@@ -171,6 +179,27 @@ public class Lista01 {
                         
                         break;
                     case 4:
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero: ");
+                        N1d = Console.ReadLine();
+                        
+                        Console.WriteLine("Digite um segundo numero: ");
+                        N2d = Console.ReadLine();
+                        
+                        Console.WriteLine("Digite um segundo numero: ");
+                        N3d = Console.ReadLine();
+
+                        if (int.TryParse(N1d, out N1D) && int.TryParse(N2d, out N2D) && int.TryParse(N3d, out N3D)) {
+                            
+                            
+                            
+                        }
+                        else {
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
                         break;
                     case 5:
                         break;
