@@ -191,11 +191,67 @@ public class Lista01 {
                         N3d = Console.ReadLine();
 
                         if (int.TryParse(N1d, out N1D) && int.TryParse(N2d, out N2D) && int.TryParse(N3d, out N3D)) {
+
+                            if (N1D > N2D) {
+                                Console.WriteLine($"O numero {N1D} é maior que {N2D}");
+                                
+                                if (N1D > N3D) {
+                                    Console.WriteLine($"O numero {N1D} é maior que {N3D}");
+                                }else if (N3D > N1D) {
+                                    Console.WriteLine($"O numero {N3D} é maior que {N1D}");
+                                }
+                                else if(N1D == N3D ){
+                                    Console.WriteLine($"O numero {N1D} é igual a {N3D}");
+                                }
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }else if (N2D > N1D){
+                                
+                                Console.WriteLine($"O numero {N2D} é maior que {N1D}");
+                                
+                                if (N2D > N3D) {
+                                    
+                                    Console.WriteLine($"O numero {N2D} é maior que {N3D}");
+                                    
+                                }else if (N3D > N2D) {
+                                    
+                                    Console.WriteLine($"O numero {N3D} é maior que {N2D}");
+                                    
+                                }else if (N2D == N3D) {
+                                    Console.WriteLine($"O numero {N2D} é igual a {N3D}");
+                                }
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }else if(N3D > N1D){
+
+                                Console.WriteLine($"O numero {N3D} é maior que {N1D}");
+                                
+                                if (N3D > N2D) {
+                                    
+                                    Console.WriteLine($"O numero {N3D} é maior que {N2D}");
+                                    
+                                }else if (N2D > N3D) {
+                                    
+                                    Console.WriteLine($"O numero {N2D} é maior que {N3D}");
+                                    
+                                }else if (N3D == N2D) {
+                                    
+                                    Console.WriteLine($"O numero {N3D} é igual a {N2D}");
+                                    
+                                }
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }else if (N1D == N2D) {
+                                Console.WriteLine($"O numero {N1D} é igual a {N2D}");
+                                
+                                
+                                
+                            }
                             
-                            
-                            
-                        }
-                        else {
+                        }else {
                             
                             Funcoesuteis.DIGITEUMNUMEROINTEIRO();
                             
@@ -238,8 +294,6 @@ public class Lista01 {
                 Funcoesuteis.DIGITEUMAOPCAOVALIDA();
                 
             }
-            
-            
         } while (Continuar);
     }
 }
