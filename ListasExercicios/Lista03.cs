@@ -11,6 +11,8 @@ public class Lista01 {
         string N1a, N2a;
         int N1B = 0,N2B = 0;
         string N1b, N2b;
+        int N1C = 0,N2C = 0;
+        string N1c, N2c;
         
         do {
             Console.Clear();
@@ -125,6 +127,48 @@ public class Lista01 {
                         
                         break;
                     case 3:
+                        Console.Clear();
+                        
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero: ");
+                        N1c = Console.ReadLine();
+                        
+                        Console.WriteLine("Digite um segundo numero: ");
+                        N2c = Console.ReadLine();
+
+                        if (int.TryParse(N1c, out N1C) && int.TryParse(N2c, out N2C)) {
+
+                            if (N1C > N2C) {
+                                Console.Clear();
+                                
+                                Console.WriteLine($"O numero {N1C} é maior que {N2C}");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }else if (N2C > N1C) {
+                                Console.Clear();
+                                
+                                Console.WriteLine($"O numero {N2C} é maior que {N1C}");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                            }
+                            else {
+                                Console.Clear();
+                                
+                                Console.WriteLine($"O numero {N2C} é igual a {N1C}");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }
+                            
+                        }
+                        else {
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
                         break;
                     case 4:
                         break;
