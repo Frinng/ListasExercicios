@@ -12,6 +12,8 @@ public class MenuDasAtividades {
     
     public static void MenuPrincipal()
     {
+
+        //Variaveis
         bool Continuar = true;
         string EscolhaDigitado;
         int Escolha;
@@ -39,10 +41,13 @@ public class MenuDasAtividades {
                 switch (Escolha) {
                     case 1:
                         
-                        Lista01.Lista03();
+                        Lista02.ListaO2();
                         
                         break;
                     case 2:
+                        
+                        Lista01.Lista03();
+                        
                         break;
                     case 3:
                         break;
@@ -74,8 +79,6 @@ public class MenuDasAtividades {
                 Funcoesuteis.DIGITEUMAOPCAOVALIDA();
                 
             }
-            
         } while (Continuar);
-
     }
 }

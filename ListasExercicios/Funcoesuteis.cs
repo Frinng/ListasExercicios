@@ -1,7 +1,9 @@
 ﻿namespace Lista03Exer;
 
-public class Funcoesuteis {
+//criei essas funções com o objetivo de economizar linhas
 
+public class Funcoesuteis {
+    
     public static void CLIQUEAQUIPARACONTINUAR() {
         
         Console.WriteLine(" ");
