@@ -62,6 +62,11 @@ public class Lista02 {
         double N1I = 0, N2I = 0;
         double ResultI = 0;
         
+        //Variaveis da Letra J/10
+        string N1Jstring;
+        double N1J = 0;
+        double ResultJ = 0;
+        
         do {
             
             Console.Clear();
@@ -319,6 +324,26 @@ public class Lista02 {
                         
                         break;
                     case 10:
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Jstring = Console.ReadLine();
+
+                        if (double.TryParse(N1Jstring, out N1J)) {
+
+                            ResultJ = N1J % 2;
+
+                            Console.WriteLine($"O resto de divisao de {N1J} = {ResultJ}");
+
+                        }else {
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
+                        Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                        
+                        
                         break;
                     case 11:
                         
@@ -341,17 +366,12 @@ public class Lista02 {
                         break;
                     
                 }
-                
-                
             }
             else {
                 
                 Funcoesuteis.DIGITEUMAOPCAOVALIDA();
                 
             }
-            
-            
         } while (Continuar);
-
     }
 }
