@@ -10,8 +10,7 @@ namespace Lista03Exer;
 
 public class Arquivo2 {
     
-    public static void MenuPrincipal()
-    {
+    public static void MenuPrincipal() {
 
         //Variaveis
         bool Continuar = true;
@@ -29,11 +28,10 @@ public class Arquivo2 {
             
             Console.WriteLine("-----------------------------------------------");
             Console.WriteLine("| 1-Lista 02                                  |");
-            Console.WriteLine("| 2-Lista 03A                                 |");
-            Console.WriteLine("| 3-Lista 03B                                 |");
-            Console.WriteLine("| 4-Lista 07                                  |");
-            Console.WriteLine("| 5-Voltar ao Menu                            |");
-            Console.WriteLine("| 6-Sair                                      |");
+            Console.WriteLine("| 2-Lista 03                                 |");
+            Console.WriteLine("| 3-Lista 07                                  |");
+            Console.WriteLine("| 4-Voltar ao Menu                            |");
+            Console.WriteLine("| 5-Sair                                      |");
             Console.WriteLine("-----------------------------------------------");
             EscolhaDigitado = Console.ReadLine();
 
@@ -50,17 +48,18 @@ public class Arquivo2 {
                         
                         break;
                     case 3:
+                        
+                        Lista07.ListaO7();
+                        
                         break;
                     case 4:
-                        break;
-                    case 5:
                         
                         Funcoesuteis.VOLTANDOAOMENU();
 
                         Arquivo1.Main();
                         
                         break;
-                    case 6:
+                    case 5:
                         
                         Funcoesuteis.SAINDODOSISTEMA();
                         

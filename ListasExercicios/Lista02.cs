@@ -9,8 +9,7 @@ namespace Lista03Exer;
 
 public class Lista02 {
 
-    public static void ListaO2()
-    {
+    public static void ListaO2() {
 
         bool Continuar = true;
         string DigitoEscolha;

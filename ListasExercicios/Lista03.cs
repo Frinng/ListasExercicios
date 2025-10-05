@@ -9,8 +9,7 @@ namespace Lista03Exer;
 
 public class Lista01 {
 
-    public static void Lista03()
-    {
+    public static void Lista03() {
         bool Continuar = true;
         string DigitoEscolha;
         int Escolha;
@@ -46,6 +45,15 @@ public class Lista01 {
         //Variavei questao H
         float N1H = 0;
         string N1Hstring;
+        
+        //Variavei questao I
+        float N1I = 0,N2I = 0;
+        float ResultI = 0;
+        string N1Istring, N2Istring;
+        
+        //Variavei questao J
+        float N1J = 0;
+        string N1Jstring;
         
         do {
             Console.Clear();
@@ -332,8 +340,8 @@ public class Lista01 {
 
                         if (int.TryParse(N1Fstring, out N1F)) {
 
-                            if (N1F % 2 == 0)
-                            {
+                            if (N1F % 2 == 0) {
+                                Console.Clear();
 
                                 Console.WriteLine($"O numero {N1F} é par");
                                 
@@ -357,8 +365,6 @@ public class Lista01 {
                         
                         break;
                     case 7:
-                        Console.Clear();
-                        
                         Console.Clear();
                         
                         Console.WriteLine("Digite um numero:");
@@ -438,11 +444,77 @@ public class Lista01 {
                         
                         break;
                     case 9:
-                        
-                        
+                        Console.Clear();
+
+                        Console.WriteLine("Digite um numero:");
+                        N1Istring = Console.ReadLine();
+
+                        Console.WriteLine();
+                        N2Istring = Console.ReadLine();
+
+                        if (float.TryParse(N1Istring, out N1I) && float.TryParse(N2Istring, out N2I)){
+                            Console.Clear();
+
+                            ResultI = Math.Abs(N1I - N2I);
+
+                            if (ResultI <= 10) {
+                                Console.Clear();
+                                
+                                Console.WriteLine(" A diferença entre os numeros é menor ou igual a 10");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }else {
+                                Console.Clear();
+                                
+                                Console.WriteLine(" A diferença entre os numeros é maior que 10");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }
+
+                        }else {
+                            Console.Clear();
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
                         
                         break;
                     case 10:
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Jstring = Console.ReadLine();
+
+                        if (float.TryParse(N1Jstring, out N1J)) {
+
+                            if (N1J == 0) {
+                                Console.Clear();
+                                
+                                Console.WriteLine("O numero é igual a 0");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }
+                            else {
+                                
+                                Console.Clear();
+                                
+                                Console.WriteLine("O numero é menor ou maior que 0");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }
+                            
+                        }
+                        else {
+                            Console.Clear();
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
                         break;
                     case 11:
                         
