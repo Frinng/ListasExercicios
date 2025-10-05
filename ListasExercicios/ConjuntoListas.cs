@@ -27,7 +27,7 @@ public class ConjuntoListas {
         int chavedigitada = 0;
         int tentativas = 0;
         bool ContinuarCadastro = true;
-        
+        bool CadastroFeito = false;
         
 
         do{
@@ -84,58 +84,80 @@ public class ConjuntoListas {
                     Console.WriteLine("-----------------------------------------------");
                 
                     Console.ReadKey();
-                    
-                    
+
+                    CadastroFeito = true;
                     break;
                 case "2":
                 case "ENTRAR":
                     Console.Clear();
 
-                    do
-                    {
-                        tentativas++;
+                    if (CadastroFeito == true) {
                         
-                        Console.WriteLine("-----------------------------------------------");
-                        Console.WriteLine("|          Digite o Nome Do Usuario           |");
-                        Console.WriteLine("-----------------------------------------------");
-                        digitodousuario = Console.ReadLine();
-                    
-                        Console.WriteLine(" ");
-                    
-                        Console.WriteLine("-----------------------------------------------");
-                        Console.WriteLine("|              Digite sua senha               |");
-                        Console.WriteLine("-----------------------------------------------");
-                        digitodousuario2 = Console.ReadLine();
-
-                        if (digitodousuario == usuario && digitodousuario2 == senha) {
+                            do{
+                                Console.Clear();
+                                
+                                tentativas++;
+                                
+                                Console.WriteLine("-----------------------------------------------");
+                                Console.WriteLine("|          Digite o Nome Do Usuario           |");
+                                Console.WriteLine("-----------------------------------------------");
+                                digitodousuario = Console.ReadLine();
                             
-                            Console.WriteLine("-----------------------------------------------");
-                            Console.WriteLine("|          Digite o Seu Codigo 2FA:           |");
-                            Console.WriteLine("-----------------------------------------------");
-                            digitodousuario3 = Console.ReadLine();
+                                Console.WriteLine(" ");
+                            
+                                Console.WriteLine("-----------------------------------------------");
+                                Console.WriteLine("|              Digite sua senha               |");
+                                Console.WriteLine("-----------------------------------------------");
+                                digitodousuario2 = Console.ReadLine();
 
-                            if (int.TryParse(digitodousuario3, out chavedigitada)) {
+                                if (digitodousuario == usuario && digitodousuario2 == senha) {
+                                
+                                    Console.WriteLine("-----------------------------------------------");
+                                    Console.WriteLine("|          Digite o Seu Codigo 2FA:           |");
+                                    Console.WriteLine("-----------------------------------------------");
+                                    digitodousuario3 = Console.ReadLine();
 
-                                if (chavedigitada == chave2FA) {
-                                    
-                                    Console.Clear();
-                                    
-                                    Console.WriteLine("-----------------------------------------------");
-                                    Console.WriteLine("|             Entrando no Sistema             |");
-                                    Console.WriteLine("-----------------------------------------------");
-                        
-                                    Console.WriteLine(" ");
+                                    if (int.TryParse(digitodousuario3, out chavedigitada)) {
+
+                                        if (chavedigitada == chave2FA) {
+                                        
+                                            Console.Clear();
+                                            
+                                            Console.WriteLine("-----------------------------------------------");
+                                            Console.WriteLine("|             Entrando no Sistema             |");
+                                            Console.WriteLine("-----------------------------------------------");
+                                
+                                            Console.WriteLine(" ");
+                            
+                                            Console.WriteLine("-----------------------------------------------");
+                                            Console.WriteLine("|   Pressione qualquer tecla para continuar   |");
+                                            Console.WriteLine("-----------------------------------------------");
+                                
+                                            Console.ReadKey();
+
+                                            MenuDasAtividades.MenuPrincipal();
+                                
+                                
+                                            Continuar = false;
+                                        
+                                    }else {
+                                            
+                                        Console.Clear();
+                            
+                                        Console.WriteLine("-----------------------------------------------");
+                                        Console.WriteLine("|          Seu Codigo 2FA Esta errado         |");
+                                        Console.WriteLine("-----------------------------------------------");
+                            
+                                        Console.WriteLine(" ");
+                                        
+                                        Console.WriteLine("-----------------------------------------------");
+                                        Console.WriteLine("|   Pressione qualquer tecla para continuar   |");
+                                        Console.WriteLine("-----------------------------------------------");
                     
-                                    Console.WriteLine("-----------------------------------------------");
-                                    Console.WriteLine("|   Pressione qualquer tecla para continuar   |");
-                                    Console.WriteLine("-----------------------------------------------");
-                        
-                                    Console.ReadKey();
-
-                                    MenuDasAtividades.MenuPrincipal();
-                        
-                        
-                                    Continuar = false;
+                                        Console.ReadKey();
+                                        
+                                    }
+                                    
                                     
                                 }
                                 else {
@@ -143,74 +165,72 @@ public class ConjuntoListas {
                                     Console.Clear();
                         
                                     Console.WriteLine("-----------------------------------------------");
-                                    Console.WriteLine("|          Seu Codigo 2FA Esta errado         |");
+                                    Console.WriteLine("|          Digite uma opção Valida            |");
                                     Console.WriteLine("-----------------------------------------------");
-                        
+                    
                                     Console.WriteLine(" ");
-                                    
+                        
                                     Console.WriteLine("-----------------------------------------------");
                                     Console.WriteLine("|   Pressione qualquer tecla para continuar   |");
                                     Console.WriteLine("-----------------------------------------------");
-                
+                    
                                     Console.ReadKey();
                                     
                                 }
                                 
-                                
-                            }
-                            else {
+                            }else {
                                 
                                 Console.Clear();
-                    
+                            
                                 Console.WriteLine("-----------------------------------------------");
-                                Console.WriteLine("|          Digite uma opção Valida            |");
+                                Console.WriteLine("|       Sua Senha ou Usuario esta Errado      |");
                                 Console.WriteLine("-----------------------------------------------");
-                
+                            
+                            
                                 Console.WriteLine(" ");
-                    
+                        
+                        
                                 Console.WriteLine("-----------------------------------------------");
                                 Console.WriteLine("|   Pressione qualquer tecla para continuar   |");
                                 Console.WriteLine("-----------------------------------------------");
-                
+                    
                                 Console.ReadKey();
                                 
                             }
                             
-                        }else {
-                            
-                            Console.Clear();
+                        }while(tentativas < 3 || (digitodousuario == usuario && digitodousuario2 == senha &&  chavedigitada == chave2FA));
                         
-                            Console.WriteLine("-----------------------------------------------");
-                            Console.WriteLine("|       Sua Senha ou Usuario esta Errado      |");
-                            Console.WriteLine("-----------------------------------------------");
+                        Console.Clear();
+                                    
+                        Console.WriteLine("-----------------------------------------------");
+                        Console.WriteLine("|        Você não possui mais tentativa       |");
+                        Console.WriteLine("-----------------------------------------------");
+                                    
+                        Console.WriteLine(" ");
+                                    
+                        Console.WriteLine("-----------------------------------------------");
+                        Console.WriteLine("|   Pressione qualquer tecla para continuar   |");
+                        Console.WriteLine("-----------------------------------------------");
+                                
+                        Console.ReadKey();
                         
+                    }
+                    else {
                         
-                            Console.WriteLine(" ");
-                    
-                    
-                            Console.WriteLine("-----------------------------------------------");
-                            Console.WriteLine("|   Pressione qualquer tecla para continuar   |");
-                            Console.WriteLine("-----------------------------------------------");
-                
-                            Console.ReadKey();
-                            
-                        }
+                        Console.WriteLine("-----------------------------------------------");
+                        Console.WriteLine("|    Você Deve fazer seu cadastro primeiro    |");
+                        Console.WriteLine("-----------------------------------------------");
                         
-                    } while (tentativas < 3 || (digitodousuario == usuario && digitodousuario2 == senha &&  chavedigitada == chave2FA));
+                        Console.WriteLine(" ");
+                        
+                        Console.WriteLine("-----------------------------------------------");
+                        Console.WriteLine("|   Pressione qualquer tecla para continuar   |");
+                        Console.WriteLine("-----------------------------------------------");
+                                
+                        Console.ReadKey();
+                        
+                    }
                     
-                    Console.Clear();
-                    
-                    Console.WriteLine("-----------------------------------------------");
-                    Console.WriteLine("|        Você não possui mais tentativa       |");
-                    Console.WriteLine("-----------------------------------------------");
-                    
-                    Console.WriteLine(" ");
-                    
-                    Console.WriteLine("-----------------------------------------------");
-                    Console.WriteLine("|   Pressione qualquer tecla para continuar   |");
-                    Console.WriteLine("-----------------------------------------------");
-                
-                    Console.ReadKey();
                     
                     break;
                 case "3":

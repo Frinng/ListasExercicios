@@ -17,25 +17,50 @@ public class Lista02 {
         int Escolha;
 
         
-        //Variaveis da letra A
+        //Variaveis da letra A/1
         string N1Astring, N2Astring;
         int N1A = 0, N2A = 0;
         int ResultA = 0;
         
-        //Variaveis da Letra B
+        //Variaveis da Letra B/2
         string N1Bstring;
         int N1B = 0;
         int ResultB = 0;
         
-        //Variaveis da Letra C
+        //Variaveis da Letra C/3
         string N1Cstring;
         int N1C = 0;
         int ResultC = 0;
         
-        //Variaveis da Letra D
+        //Variaveis da Letra D/4
         string N1Dstring;
         int N1D = 0;
         int ResultD = 0;
+        
+        //Variaveis da letra E/5
+        string N1Estring, N2Estring;
+        float N1E = 0, N2E = 0;
+        float ResultE = 0;
+        
+        //Variaveis da letra F/6
+        string N1Fstring;
+        double N1F = 0;
+        double ResultF = 0;
+        
+        //Variaveis da letra G/7
+        string N1Gstring, N2Gstring;
+        int N1G = 0, N2G = 0;
+        int ResultG = 0;
+        
+        //Variaveis da letra H/8
+        string N1Hstring;
+        double N1H = 0;
+        double ResultH = 0;
+        
+        //Variaveis da letra i/9
+        string N1Istring, N2Istring;
+        double N1I = 0, N2I = 0;
+        double ResultI = 0;
         
         do {
             
@@ -166,14 +191,132 @@ public class Lista02 {
                         
                         break;
                     case 5:
+                        
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Estring = Console.ReadLine();
+                        
+                        Console.WriteLine("Digite outro Numero:");
+                        N2Estring = Console.ReadLine();
+
+                        if (float.TryParse(N1Estring, out N1E) && float.TryParse(N2Estring, out N2E)) {
+                            
+
+                            ResultE = N1E / N2E;
+                            
+                            Console.WriteLine($"{N1E} ÷ {N2E} = {ResultE:F2}");
+
+                        }
+                        else {
+                                
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
+                        
+                        Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                        
                         break;
                     case 6:
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Fstring = Console.ReadLine();
+
+                        if (double.TryParse(N1Fstring, out N1F))
+                        {
+
+                            ResultF = Math.Sqrt(N1F);
+                            
+                            Console.WriteLine($"O Quadrado de {N1F} é {ResultF:F2}");
+
+                        }
+                        else {
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
+                        Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                        
                         break;
                     case 7:
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Gstring = Console.ReadLine();
+                        
+                        Console.WriteLine("Digite outro Numero:");
+                        N2Gstring = Console.ReadLine();
+
+                        if (int.TryParse(N1Gstring, out N1G) && int.TryParse(N2Gstring, out N2G)) {
+                            
+
+                            ResultG = N2G - N1G;
+                            
+                            Console.WriteLine($"{N2G} + {N1G} = {ResultG}");
+
+                        }
+                        else {
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
+                        Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                        
+                        
                         break;
                     case 8:
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Hstring = Console.ReadLine();
+
+                        if (double.TryParse(N1Hstring, out N1H))
+                        {
+
+                            ResultH = Math.Abs(N1H);
+                            
+                            Console.WriteLine($"O absoluto de {N1H} é {ResultH}");
+
+
+                        }else {
+                            
+                            Funcoesuteis.DIGITEUMAOPCAOVALIDA();
+                            
+                        }
+                        
+                        Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                        
                         break;
                     case 9:
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Istring = Console.ReadLine();
+                        
+                        Console.WriteLine("Digite outro Numero:");
+                        N2Istring = Console.ReadLine();
+
+                        if (double.TryParse(N1Istring, out N1I) && double.TryParse(N2Istring, out N2I)) {
+                            
+
+                            ResultI = N1I * N2I;
+                            
+                            Console.WriteLine($"{N1I:F0} x {N2I:F0} = {ResultI:F1}");
+
+                        }
+                        else {
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
+                        Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                        
+                        
                         break;
                     case 10:
                         break;
