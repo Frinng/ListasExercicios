@@ -1,4 +1,11 @@
-﻿namespace Lista03Exer;
+﻿/*
+ *Nome: Menu Principal
+ *Nome do Criador: Pedro Henrique Vieira Lima
+ *Data da Criação: 02/10/2025
+ *Hora da Criação: 23:19
+ */
+
+namespace Lista03Exer;
 
 public class Lista01 {
 
@@ -23,6 +30,22 @@ public class Lista01 {
         //Variaveis questao D
         int N1D = 0, N2D = 0, N3D = 0;
         string N1d, N2d, N3d;
+        
+        //Variaveis questao E
+        float N1E = 0, N2E = 0;
+        string N1Estring, N2Estring;
+
+        //Variavei questao F
+        int N1F = 0;
+        string N1Fstring;
+        
+        //Variaveis questao G
+        float N1G = 0, N2G = 0;
+        string N1Gstring, N2Gstring;
+        
+        //Variavei questao H
+        float N1H = 0;
+        string N1Hstring;
         
         do {
             Console.Clear();
@@ -245,8 +268,163 @@ public class Lista01 {
                                 Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
                                 
                             }else if (N1D == N2D) {
+                                
                                 Console.WriteLine($"O numero {N1D} é igual a {N2D}");
                                 
+                            }
+                        }else {
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
+                        break;
+                    case 5:
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Estring = Console.ReadLine();
+                        
+                        Console.WriteLine("Digite mais um numero:");
+                        N2Estring = Console.ReadLine();
+
+                        if (float.TryParse(N1Estring, out N1E) && float.TryParse(N2Estring, out N2E)) {
+
+                            if (N1E > N2E) {
+                                Console.Clear();
+
+                                Console.WriteLine("O Primeiro Numero é maior que o segundo");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }else if (N1E == N2E) {
+                                
+                                Console.Clear();
+
+                                Console.WriteLine("O Primeiro Numero é igual ao segundo");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }
+                            else{
+                                
+                                Console.Clear();
+
+                                Console.WriteLine("O Primeiro Numero é menor que o segundo");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }
+                            
+                        }
+                        else {
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
+                        break;
+                    case 6:
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Fstring = Console.ReadLine();
+
+                        if (int.TryParse(N1Fstring, out N1F)) {
+
+                            if (N1F % 2 == 0)
+                            {
+
+                                Console.WriteLine($"O numero {N1F} é par");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+
+                            }else {
+                                
+                                Console.WriteLine($"O numero {N1F} é impar");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }
+                            
+                        }
+                        else {
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
+                        
+                        break;
+                    case 7:
+                        Console.Clear();
+                        
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Gstring = Console.ReadLine();
+                        
+                        Console.WriteLine("Digite mais um numero:");
+                        N2Gstring = Console.ReadLine();
+
+                        if (float.TryParse(N1Gstring, out N1G) && float.TryParse(N2Gstring, out N2G)) {
+
+                            if (N1G < N2G) {
+                                Console.Clear();
+
+                                Console.WriteLine("O Primeiro Numero é menor que o segundo");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }else if (N1G == N2G) {
+                                
+                                Console.Clear();
+
+                                Console.WriteLine("O Primeiro Numero é igual ao segundo");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }
+                            else{
+                                
+                                Console.Clear();
+                                
+                                Console.WriteLine("O Primeiro Numero é maior que o segundo");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                                
+                            }
+                            
+                        }
+                        else {
+                            
+                            Funcoesuteis.DIGITEUMNUMEROINTEIRO();
+                            
+                        }
+                        
+                        
+                        break;
+                    case 8:
+                        Console.Clear();
+                        
+                        Console.WriteLine("Digite um numero:");
+                        N1Hstring = Console.ReadLine();
+
+                        if (float.TryParse(N1Hstring, out N1H)) {
+
+                            if (N1H > 0) {
+                                Console.Clear();
+                                
+                                Console.WriteLine($"O numero {N1H} é positivo");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
+                            }
+                            else {
+                                Console.Clear();
+                                
+                                Console.WriteLine($"O numero {N1H} é negativo");
+                                
+                                Funcoesuteis.CLIQUEAQUIPARACONTINUAR();
                                 
                                 
                             }
@@ -256,18 +434,13 @@ public class Lista01 {
                             Funcoesuteis.DIGITEUMNUMEROINTEIRO();
                             
                         }
-                        break;
-                    case 5:
                         
                         
-                        break;
-                    case 6:
-                        break;
-                    case 7:
-                        break;
-                    case 8:
                         break;
                     case 9:
+                        
+                        
+                        
                         break;
                     case 10:
                         break;
@@ -275,7 +448,7 @@ public class Lista01 {
                         
                         Funcoesuteis.VOLTANDOAOMENU();
 
-                        MenuDasAtividades.MenuPrincipal();
+                        Arquivo2.MenuPrincipal();
                         
                         break;
                     case 12:

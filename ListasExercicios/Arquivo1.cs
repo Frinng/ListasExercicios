@@ -10,7 +10,7 @@
 using System;
 using Lista03Exer;
 
-public class ConjuntoListas {
+public class Arquivo1 {
     public static void Main() {
  
         Random TwoFA = new Random();
@@ -135,7 +135,7 @@ public class ConjuntoListas {
                                 
                                             Console.ReadKey();
 
-                                            MenuDasAtividades.MenuPrincipal();
+                                            Arquivo2.MenuPrincipal();
                                 
                                 
                                             Continuar = false;

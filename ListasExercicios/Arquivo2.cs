@@ -8,7 +8,7 @@
 
 namespace Lista03Exer;
 
-public class MenuDasAtividades {
+public class Arquivo2 {
     
     public static void MenuPrincipal()
     {
@@ -57,7 +57,7 @@ public class MenuDasAtividades {
                         
                         Funcoesuteis.VOLTANDOAOMENU();
 
-                        ConjuntoListas.Main();
+                        Arquivo1.Main();
                         
                         break;
                     case 6:

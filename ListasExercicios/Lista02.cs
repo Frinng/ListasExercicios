@@ -349,7 +349,7 @@ public class Lista02 {
                         
                         Funcoesuteis.VOLTANDOAOMENU();
 
-                        MenuDasAtividades.MenuPrincipal();
+                        Arquivo2.MenuPrincipal();
                         
                         break;
                     case 12:
